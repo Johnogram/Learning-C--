@@ -8,23 +8,38 @@ int main()
     int firstNumber;
     int secondNumber;
 
-    cout << "Enter a number: ";
-    cin >> firstNumber;
-    cout << "You entered " << firstNumber << ". Enter another number: ";
-    cin >> secondNumber;
+    bool keepGoing = true;
+    int answer;
 
-    if (firstNumber < secondNumber)
+    while (keepGoing)
     {
-        cout << firstNumber << " is less than " << secondNumber;
-    }
+        cout << "Enter a number: ";
+        cin >> firstNumber;
+        cout << "You entered " << firstNumber << ". Enter another number: ";
+        cin >> secondNumber;
 
-    if (firstNumber == secondNumber)
-    {
-        cout << firstNumber << " is equal to " << secondNumber;
-    }
+        if (firstNumber < secondNumber)
+        {
+            cout << firstNumber << " is less than " << secondNumber;
+        }
 
-    if (firstNumber > secondNumber)
-    {
-        cout << firstNumber << " is greater than " << secondNumber;
+        if (firstNumber == secondNumber)
+        {
+            cout << firstNumber << " is equal to " << secondNumber;
+        }
+
+        if (firstNumber > secondNumber)
+        {
+            cout << firstNumber << " is greater than " << secondNumber;
+        }
+
+        cout << "\n\n";
+        cout << "Continue? (1 = Yes, 0 = No) ";
+        cin >> answer;
+
+        if (answer == 0)
+        {
+            keepGoing = false;
+        }
     }
 }
