@@ -10,3 +10,4 @@ int main()
     cout << "Enter a number: ";
     cin >> i;
     cout << '\n' << i << '\n';
+}
